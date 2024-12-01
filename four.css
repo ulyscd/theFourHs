@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    perspective: 10px;
+    background-image: url(media/blurw2.jpg);
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.background  {
+    transform: translateZ(-10px) scale(2);
+    object-fit: cover;
+}
+
+.foreground {
+    transform: translateZ(-5px) scale(1.5);
+    object-fit: scale-down;
+}
+
+.background, .foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.titleText {
+    font-size: 7rem;
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+
+section {
+    font-size: 2rem;
+    padding: 2rem;
+    color: white;
+    background-color: #333;
+}
+
+.links {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem 0;
+}
+
+.links img {
+    height: 7rem;
+    width: 7rem;
+    margin: 0 1rem;
+    border-radius: 5%;
+    transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+}
+
+.links img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px white;
+}
+
+
+.back-button img {
+    height: 10rem;
+    width: 20rem;
+    margin: 0 70rem;
+    transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+}
+
+.back-button img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px white);
+}
+
+#mac {
+    object-fit: contain;
+    left: -10rem;
+}
+
+#in-line {
+    size: 10px;
+}
